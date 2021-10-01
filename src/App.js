@@ -103,7 +103,7 @@ const initialize = () => {
     return newArray;
   } else {
     setData(newArray);
-    checkIf128(newArray);
+    checkIf2048(newArray);
   }
 };
 
@@ -151,7 +151,7 @@ const swipeRight = (dummy) => {
     return newArray;
   } else {
     setData(newArray);
-    checkIf128(newArray);
+    checkIf2048(newArray);
   }
 };
 
@@ -198,7 +198,7 @@ const swipeDown = (dummy) => {
     return b;
   } else {
     setData(b);
-    checkIf128(b);
+    checkIf2048(b);
   }
 };
 
@@ -244,7 +244,7 @@ const swipeUp = (dummy) => {
     return b;
   } else {
     setData(b);
-    checkIf128(b);
+    checkIf2048(b);
   }
 };
 
@@ -278,10 +278,10 @@ const checkIfGameOver = () => {
   return true;
 };
 
-const checkIf128 = (data1) => {
+const checkIf2048 = (data1) => {
   let b = data1
   for (var i=0;i<b.length;i++){
-    if (b[i].includes(128)){
+    if (b[i].includes(2048)){
       console.log('Game Won');
       alert('YOU WON');
     }
@@ -356,7 +356,7 @@ return (
             color: "#776e65",
           }}
         >
-          128
+          2048
         </div>
         <div
           style={{
@@ -366,6 +366,14 @@ return (
         >
         </div>
       </div>
+
+      <div
+      style={{
+        width: 345,
+        margin: "auto",
+        bottom: 30,
+      }}></div>
+
       <div
         style={{
           background: "#AD9D8F",
